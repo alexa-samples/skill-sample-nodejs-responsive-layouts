@@ -24,10 +24,10 @@ Welcome to Alexa Presentation Language (APL) tutorial skill! This skill demonstr
    - Tab on or say the name of component or template to display the selected template and tutorial on how to use it
 
 APL Tutorial first screen
-(https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/screenshot-landingpage.png)
+![First screen](https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/screenshot-landingpage.png)
 
 APL Responsive Layouts screen
-(https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/screenshot-layouts.png)
+![Responsive Layouts screen](https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/screenshot-layouts.png)
 
 APL Recipes screen
-(https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/screenshot-recipes.png)
+![Recipes screen](https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/screenshot-recipes.png)
