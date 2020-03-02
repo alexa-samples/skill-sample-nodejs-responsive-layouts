@@ -1,0 +1,40 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "import": [
+        { "name": "alexa-layouts", 
+          "version": "1.1.0"
+        }
+    ],
+    "mainTemplate": {
+      "parameters": [
+        "payload"
+      ],
+      "items": [
+        {
+          "type": "Frame",
+          "backgroundColor": "#000000",
+          "item": [
+            {
+              "type": "Container",
+              "height": "100%",
+              "width": "100%",
+              "items": [
+                {
+                  "type": "AlexaHeader",
+                  "headerBackButton": true,
+                  "headerBackButtonAccessibilityLabel": "back",
+                  "headerTitle": "Example Header",
+                  "headerSubtitle": "With back button, divider, and attribution image",
+                  "headerAttributionText": "Attribution",
+                  "headerAttributionImage": "https://s3.amazonaws.com/ask-skills-assets/apl-layout-assets/attribution_dark_hub_prime.png",
+                  "headerAttributionPrimacy": true,
+                  "headerDivider": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }

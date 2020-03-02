@@ -1,0 +1,29 @@
+{
+    "aplTutorialTypeData": {
+        "type": "object",
+        "properties": {
+            "description": "Use this datasource to render Launch Template in APL Authoring Tool",
+            "headerTitle": "Welcome to Responsive APL examples",
+            "hintText": "how to make create Alexa Headline?",
+            "items": [
+                {
+                    "id": "AplResponsiveLayouts",
+                    "name": "APL Responsive Layouts",
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/headline.png"
+                },
+                {
+                    "id": "AplRecipes",
+                    "name": "APL Recipes",
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/textList.png"
+                }
+            ]
+        },
+        "transformers": [
+            {
+                "inputPath": "hintText",
+                "transformer": "textToHint"
+            }
+        ]
+        
+    }
+}

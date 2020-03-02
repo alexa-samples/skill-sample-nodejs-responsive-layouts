@@ -1,0 +1,102 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.0.0"
+        }
+    ],
+    "onMount": [
+        {
+            "type": "SpeakItem",
+            "componentId": "Narrative",
+            "highlightMode": "line",
+            "align": "first"
+        }, {
+            "type": "ControlMedia",
+            "command": "play",
+            "componentId": "VideoPlayer"
+        }, {
+            "type": "AutoPage",
+            "componentId": "HintPager",
+            "duration": 6000
+        }
+    ],
+    "styles": {
+        "textStyleBodyKaraoke": {
+            "extends": "textStyleBody",
+            "values": [
+                {
+                    "when": "${state.karaoke}",
+                    "color": "grey"
+                },
+                {
+                    "when": "${state.karaokeTarget}",
+                    "color": "white"
+                }
+            ]
+        }
+    },
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "when": "${viewport.shape == 'round'}",
+                "width": "100%",
+                "height": "100%",
+                "alignItems": "center",
+                "justifyContent": "spaceAround",
+                "items": [
+                    {
+                        "type": "Container",
+                        "width": "75%",
+                        "height": "60%",
+                        "item": [
+                            {
+                                "type": "Text",
+                                "style": "textStyleBodyKaraoke",
+                                "textAlign": "center",
+                                "text": "${payload.videoResponseData.properties.description}"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "Container",
+                "width": "100%",
+                "height": "100%",
+                "alignItems": "center",
+                "justifyContent": "start",
+                "items": [
+                    {
+                        "type": "Text",
+                        "style": "textStyleDisplay4",
+                        "text": "${payload.videoResponseData.properties.title}"
+                    },
+                    {
+                        "type": "Container",
+                        "width": "90%",
+                        "height": "70%",
+                        "alignItems": "center",
+                        "justifyContent": "end",
+                        "items": [
+                            {
+                                "type": "Text",
+                                "speech": "${payload.videoResponseData.properties.descriptionSpeech}",
+                                "id": "Narrative",
+                                "style": "textStyleBodyKaraoke",
+                                "text": "${payload.videoResponseData.properties.description}"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

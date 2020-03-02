@@ -1,0 +1,78 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "import": [
+      { "name": "alexa-layouts", 
+        "version": "1.1.0"
+      }
+    ],
+    "resources": [
+        {
+            "description": "Page Counter ID definitions",
+            "strings": {
+                "roundHubPageCounterId": "roundHubCounter",
+                "rectangleHubPageCounterId": "rectangleHubCounter"
+            }
+        }
+    ],
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "height": "100vh",
+                "item": [
+                    {
+                        "type": "Pager",
+                        "width": "100vw",
+                        "height": "85vh",
+                        "onPageChanged": [
+                            {
+                                "type": "SetValue",
+                                "componentId": "@rectangleHubPageCounterId",
+                                "property": "text",
+                                "value": "${event.source.value + 1}"
+                            }
+                        ],
+                        "data": [
+                            "Try swiping the page ->",
+                            "The Alexa page counter responsive component",
+                            "displays a current page number and total number of pages",
+                            "such as \"4 | 5\" for page four out of five.",
+                            "You can use this to number pages in a Pager"
+                        ],
+                        "item": [
+                            {
+                                "type": "Container",
+                                "items": [
+                                    {
+                                        "type": "Text",
+                                        "paddingTop": "150dp",
+                                        "paddingRight": "30dp",
+                                        "paddingLeft": "30dp",
+                                        "textAlign": "center",
+                                        "style": "textStyleDisplay5",
+                                        "text": "${data}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Container",
+                        "item": [
+                            {
+                                "currentPageComponentId": "@rectangleHubPageCounterId",
+                                "totalPages": "5",
+                                "type": "AlexaPageCounter"
+                            }
+                        ],
+                        "alignItems": "center"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,204 @@
+{
+    "listTemplate1Metadata": {
+        "type": "object",
+        "objectId": "lt1Metadata",
+        "backgroundImage": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [{
+                "url": "https://d2o906d8ln7ui1.cloudfront.net/images/LT1_Background.png",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+            }, {
+                "url": "https://d2o906d8ln7ui1.cloudfront.net/images/LT1_Background.png",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+            }]
+        },
+        "title": "Calories in 1 Serving of Cheese",
+        "logoUrl": "https://d2o906d8ln7ui1.cloudfront.net/images/cheeseskillicon.png"
+    },
+    "listTemplate1ListData": {
+        "type": "list",
+        "listId": "lt1Sample",
+        "properties": {
+            "totalNumberOfItems": 10,
+            "listPage": {
+                "listItems": [{
+                    "listItemIdentifier": "gouda",
+                    "ordinalNumber": 1,
+                    "textContent": {
+                        "primaryText": {
+                            "type": "PlainText",
+                            "text": "Gouda"
+                        },
+                        "secondaryText": {
+                            "type": "PlainText",
+                            "text": "Serving Size: 1oz (28g)"
+                        },
+                        "tertiaryText": {
+                            "type": "PlainText",
+                            "text": "100 cal"
+                        }
+                    },
+                    "image": {
+                        "contentDescription": null,
+                        "smallSourceUrl": null,
+                        "largeSourceUrl": null,
+                        "sources": [{
+                            "url": "https://d2o906d8ln7ui1.cloudfront.net/images/sm_gouda.png",
+                            "size": "small",
+                            "widthPixels": 0,
+                            "heightPixels": 0
+                        }, {
+                            "url": "https://d2o906d8ln7ui1.cloudfront.net/images/sm_gouda.png",
+                            "size": "large",
+                            "widthPixels": 0,
+                            "heightPixels": 0
+                        }]
+                    },
+                    "token": "gouda"
+                }, {
+                    "listItemIdentifier": "cheddar",
+                    "ordinalNumber": 2,
+                    "textContent": {
+                        "primaryText": {
+                            "type": "PlainText",
+                            "text": "Sharp Cheddar"
+                        },
+                        "secondaryText": {
+                            "type": "RichText",
+                            "text": "Serving Size: 1 slice (28g)"
+                        },
+                        "tertiaryText": {
+                            "type": "PlainText",
+                            "text": "113 cal"
+                        }
+                    },
+                    "image": {
+                        "contentDescription": null,
+                        "smallSourceUrl": null,
+                        "largeSourceUrl": null,
+                        "sources": [{
+                            "url": "https://d2o906d8ln7ui1.cloudfront.net/images/sm_cheddar.png",
+                            "size": "small",
+                            "widthPixels": 0,
+                            "heightPixels": 0
+                        }, {
+                            "url": "https://d2o906d8ln7ui1.cloudfront.net/images/sm_cheddar.png",
+                            "size": "large",
+                            "widthPixels": 0,
+                            "heightPixels": 0
+                        }]
+                    },
+                    "token": "cheddar"
+                }, {
+                    "listItemIdentifier": "blue",
+                    "ordinalNumber": 3,
+                    "textContent": {
+                        "primaryText": {
+                            "type": "PlainText",
+                            "text": "Blue"
+                        },
+                        "secondaryText": {
+                            "type": "RichText",
+                            "text": "Serving Size: 1c, crumbled (135g)"
+                        },
+                        "tertiaryText": {
+                            "type": "PlainText",
+                            "text": "476 cal"
+                        }
+                    },
+                    "image": {
+                        "contentDescription": null,
+                        "smallSourceUrl": null,
+                        "largeSourceUrl": null,
+                        "sources": [{
+                            "url": "https://d2o906d8ln7ui1.cloudfront.net/images/sm_blue.png",
+                            "size": "small",
+                            "widthPixels": 0,
+                            "heightPixels": 0
+                        }, {
+                            "url": "https://d2o906d8ln7ui1.cloudfront.net/images/sm_blue.png",
+                            "size": "large",
+                            "widthPixels": 0,
+                            "heightPixels": 0
+                        }]
+                    },
+                    "token": "blue"
+                }, {
+                    "listItemIdentifier": "brie",
+                    "ordinalNumber": 4,
+                    "textContent": {
+                        "primaryText": {
+                            "type": "PlainText",
+                            "text": "Brie"
+                        },
+                        "secondaryText": {
+                            "type": "RichText",
+                            "text": "Serving Size: 1oz (28g)"
+                        },
+                        "tertiaryText": {
+                            "type": "PlainText",
+                            "text": "95 cal"
+                        }
+                    },
+                    "image": {
+                        "contentDescription": null,
+                        "smallSourceUrl": null,
+                        "largeSourceUrl": null,
+                        "sources": [{
+                            "url": "https://d2o906d8ln7ui1.cloudfront.net/images/sm_brie.png",
+                            "size": "small",
+                            "widthPixels": 0,
+                            "heightPixels": 0
+                        }, {
+                            "url": "https://d2o906d8ln7ui1.cloudfront.net/images/sm_brie.png",
+                            "size": "large",
+                            "widthPixels": 0,
+                            "heightPixels": 0
+                        }]
+                    },
+                    "token": "brie"
+                }, {
+                    "listItemIdentifier": "cheddar",
+                    "ordinalNumber": 5,
+                    "textContent": {
+                        "primaryText": {
+                            "type": "PlainText",
+                            "text": "Cheddar"
+                        },
+                        "secondaryText": {
+                            "type": "RichText",
+                            "text": "Serving Size: 1oz (28g)"
+                        },
+                        "tertiaryText": {
+                            "type": "PlainText",
+                            "text": "113 cal"
+                        }
+                    },
+                    "image": {
+                        "contentDescription": null,
+                        "smallSourceUrl": null,
+                        "largeSourceUrl": null,
+                        "sources": [{
+                            "url": "https://d2o906d8ln7ui1.cloudfront.net/images/sm_cheddar.png",
+                            "size": "small",
+                            "widthPixels": 0,
+                            "heightPixels": 0
+                        }, {
+                            "url": "https://d2o906d8ln7ui1.cloudfront.net/images/sm_cheddar.png",
+                            "size": "large",
+                            "widthPixels": 0,
+                            "heightPixels": 0
+                        }]
+                    },
+                    "token": "cheddar"
+                }]
+            }
+        }
+    }
+}

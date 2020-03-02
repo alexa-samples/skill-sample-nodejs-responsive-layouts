@@ -1,0 +1,33 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.1.0"
+        }
+    ],
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "AlexaTextList",
+                "headerBackButton": "${payload.aplDocData.headerBackButton}",
+                "headerDivider": true,
+                "headerSubtitle": "${payload.aplDocData.headerSubtitle}",
+                "headerTitle": "${payload.aplDocData.headerTitle}",
+                "hideOrdinal": true,
+                "primaryAction": {
+                    "type": "SendEvent",
+                    "arguments": [
+                        "aplDocInstructions",
+                        "${data.id}"
+                    ]
+                },
+                "listItems": "${payload.aplDocData.items}"
+            }
+        ]
+    }
+}

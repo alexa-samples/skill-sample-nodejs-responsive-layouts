@@ -1,0 +1,267 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "settings": {},
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.1.0"
+        }
+    ],
+    "resources": [],
+    "styles": {},
+    "onMount": [
+        {
+            "type": "Parallel",
+            "delay": 300,
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "easing": "ease-in-out",
+                    "duration": 3000,
+                    "componentId": "p0",
+                    "repeatCount": 100,
+                    "repeatMode": "reverse",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": -600
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "easing": "ease-in-out",
+                    "duration": 3000,
+                    "componentId": "p1",
+                    "repeatCount": 100,
+                    "repeatMode": "reverse",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": -540
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "easing": "ease-in-out",
+                    "duration": 3000,
+                    "componentId": "p2",
+                    "repeatCount": 100,
+                    "repeatMode": "reverse",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": -500
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "easing": "ease-in-out",
+                    "duration": 3000,
+                    "componentId": "p3",
+                    "repeatCount": 100,
+                    "repeatMode": "reverse",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": -460
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "easing": "ease-in-out",
+                    "duration": 3000,
+                    "componentId": "p4",
+                    "repeatCount": 100,
+                    "repeatMode": "reverse",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": -420
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "easing": "ease-in-out",
+                    "duration": 3000,
+                    "componentId": "p5",
+                    "repeatCount": 100,
+                    "repeatMode": "reverse",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": -360
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "easing": "ease-in-out",
+                    "duration": 3000,
+                    "componentId": "p6",
+                    "repeatCount": 100,
+                    "repeatMode": "reverse",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": -300
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "graphics": {},
+    "commands": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "height": "100%",
+                "width": "100%",
+                "paddingTop": "16dp",
+                "paddingLeft": "16dp",
+                "paddingRight": "16dp",
+                "paddingBottom": "16dp",
+                "items": [
+                    {
+                        "type": "Image",
+                        "source": "https://s.electerious.com/parallaxscene/p0.png",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "top": "500dp",
+                        "id": "p0",
+                        "position": "absolute"
+                    },
+                    {
+                        "type": "Image",
+                        "source": "https://s.electerious.com/parallaxscene/p1.png",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "top": "500dp",
+                        "id": "p1",
+                        "position": "absolute"
+                    },
+                    {
+                        "type": "Image",
+                        "source": "https://s.electerious.com/parallaxscene/p2.png",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "id": "p2",
+                        "top": "500dp",
+                        "position": "absolute"
+                    },
+                    {
+                        "type": "Image",
+                        "source": "https://s.electerious.com/parallaxscene/p3.png",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "id": "p3",
+                        "top": "500dp",
+                        "position": "absolute"
+                    },
+                    {
+                        "type": "Image",
+                        "source": "https://s.electerious.com/parallaxscene/p4.png",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "id": "p4",
+                        "top": "500dp",
+                        "position": "absolute"
+                    },
+                    {
+                        "type": "Image",
+                        "source": "https://s.electerious.com/parallaxscene/p5.png",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "id": "p5",
+                        "top": "500dp",
+                        "position": "absolute"
+                    },
+                    {
+                        "type": "Image",
+                        "source": "https://s.electerious.com/parallaxscene/p6.png",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "id": "p6",
+                        "top": "500dp",
+                        "position": "absolute"
+                    }
+                ]
+            }
+        ]
+    }
+}

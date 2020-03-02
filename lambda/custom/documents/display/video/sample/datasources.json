@@ -1,0 +1,39 @@
+{
+    "videoResponseData": {
+        "type": "object",
+        "properties": {
+            "title": "APL video player shows an embedded video or series of videos to play",
+            "description": "If configured on your car, your Model 3 will indicate that Traffic-Aware Cruise Control and Autosteer are available by presenting a gray steering wheel and speed dial icon below your speedometer. When available, press down on the gear selector once to engage Traffic-Aware Cruise Control, or twice to engage Traffic-Aware Cruise Control and Autosteer. The Traffic-Aware Cruise Control and Autosteer icon will then highlight blue to indicate that they are engaged.",
+            "source": "https://www.tesla.com/ns_videos/ownership/model3/Model3_Features_AutoPilot.mp4",
+            "hasAudio": true
+        }
+    },
+    "hintsData": {
+        "type": "object",
+        "properties": {
+            "hints": [
+                {
+                    "hint": "how do I change gears"
+                },
+                {
+                    "hint": "how do I turn on climate control"
+                },
+                {
+                    "hint": "tell me about autopilot"
+                },
+                {
+                    "hint": "show me how to charge"
+                },
+                {
+                    "hint": "is my car charged?"
+                }
+            ]
+        },
+        "transformers": [
+            {
+                "transformer": "textToHint",
+                "inputPath": "hints[*].hint"
+            }
+        ]
+    }
+}

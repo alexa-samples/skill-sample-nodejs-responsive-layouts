@@ -1,0 +1,35 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "import": [
+      { "name": "alexa-layouts", 
+        "version": "1.1.0"
+      }
+    ],
+    "mainTemplate": {
+        "parameters": [
+          "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "items": [
+                    {
+                        "type": "Container",
+                        "direction": "row",
+                        "grow": 1,
+                        "shrink": 1,
+                        "height": "100vh"
+                    },
+                    {
+                        "type": "AlexaFooter",
+                        "theme": "dark",
+                        "hintText": "Alexa, what's the answer to the universe?"
+                    }
+                ]
+            }
+        ]
+      }
+}

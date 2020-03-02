@@ -1,0 +1,804 @@
+{
+    "type": "APL",
+    "version": "1.3",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.1.0"
+        }
+    ],
+    "graphics": {
+        "equalizerBar1": {
+            "type": "AVG",
+            "version": "1.0",
+            "height": 4,
+            "width": 12,
+            "parameters": [
+                {
+                    "name": "barColor",
+                    "type": "color",
+                    "default": "white"
+                }
+            ],
+            "items": [
+                {
+                    "type": "path",
+                    "pathData": "M12,4H0V0h12V4z",
+                    "fill": "${barColor}"
+                }
+            ]
+        },
+        "equalizerBar2": {
+            "description": "Seven by three graphic equalizer",
+            "type": "AVG",
+            "version": "1.0",
+            "parameters": [
+                {
+                    "name": "Tick",
+                    "description": "Index into the display array",
+                    "type": "number",
+                    "default": 0
+                },
+                {
+                    "name": "ColorOn",
+                    "description": "The color to light up",
+                    "default": "white",
+                    "type": "color"
+                },
+                {
+                    "name": "ColorOff",
+                    "description": "The color when not lit",
+                    "default": "transparent",
+                    "type": "color"
+                },
+                {
+                    "name": "Values",
+                    "description": "An array of values to set",
+                    "default": [
+                        [
+                            1,
+                            2,
+                            2
+                        ],
+                        [
+                            2,
+                            2,
+                            2
+                        ],
+                        [
+                            3,
+                            2,
+                            2
+                        ],
+                        [
+                            4,
+                            2,
+                            2
+                        ],
+                        [
+                            5,
+                            2,
+                            3
+                        ],
+                        [
+                            6,
+                            2,
+                            3
+                        ],
+                        [
+                            6,
+                            2,
+                            4
+                        ],
+                        [
+                            5,
+                            3,
+                            4
+                        ],
+                        [
+                            5,
+                            3,
+                            5
+                        ],
+                        [
+                            4,
+                            3,
+                            5
+                        ],
+                        [
+                            4,
+                            4,
+                            6
+                        ],
+                        [
+                            3,
+                            4,
+                            6
+                        ],
+                        [
+                            3,
+                            4,
+                            6
+                        ],
+                        [
+                            2,
+                            4,
+                            5
+                        ],
+                        [
+                            2,
+                            4,
+                            5
+                        ],
+                        [
+                            1,
+                            5,
+                            4
+                        ],
+                        [
+                            2,
+                            5,
+                            4
+                        ],
+                        [
+                            3,
+                            5,
+                            3
+                        ],
+                        [
+                            4,
+                            5,
+                            3
+                        ],
+                        [
+                            5,
+                            4,
+                            3
+                        ],
+                        [
+                            6,
+                            4,
+                            2
+                        ],
+                        [
+                            6,
+                            4,
+                            2
+                        ],
+                        [
+                            5,
+                            4,
+                            2
+                        ],
+                        [
+                            5,
+                            4,
+                            3
+                        ],
+                        [
+                            4,
+                            3,
+                            4
+                        ],
+                        [
+                            4,
+                            3,
+                            5
+                        ],
+                        [
+                            3,
+                            3,
+                            4
+                        ],
+                        [
+                            3,
+                            3,
+                            4
+                        ],
+                        [
+                            2,
+                            2,
+                            4
+                        ],
+                        [
+                            2,
+                            2,
+                            3
+                        ]
+                    ]
+                }
+            ],
+            "width": 48,
+            "height": 48,
+            "items": [
+                {
+                    "type": "path",
+                    "pathData": "M4,4 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][0] >= 7 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M4,10 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][0] >= 6 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M4,16 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][0] >= 5 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M4,22 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][0] >= 4 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M4,28 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][0] >= 3 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M4,34 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][0] >= 2 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M4,40 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][0] >= 1 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M18,4 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][1] >= 7 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M18,10 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][1] >= 6 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M18,16 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][1] >= 5 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M18,22 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][1] >= 4 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M18,28 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][1] >= 3 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M18,34 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][1] >= 2 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M18,40 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][1] >= 1 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M32,40 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][1] >= 1 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M32,4 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][2] >= 7 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M32,10 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][2] >= 6 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M32,16 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][2] >= 5 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M32,22 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][2] >= 4 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M32,28 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][2] >= 3 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M32,34 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][2] >= 2 ? ColorOn : ColorOff}"
+                },
+                {
+                    "type": "path",
+                    "pathData": "M32,40 l12,0 l0,4 l-12,0 Z",
+                    "fill": "${Values[Tick % Values.length][2] >= 1 ? ColorOn : ColorOff}"
+                }
+            ]
+        }
+    },
+    "commands": {
+        "equalizerBar1Loop": {
+            "commands": [
+                {
+                    "type": "Sequential",
+                    "commands": [
+                        {
+                            "type": "Parallel",
+                            "commands": [
+                                {
+                                    "componentId": "c1_r2",
+                                    "type": "loadInOut_02",
+                                    "delayStart": 0,
+                                    "delayDuration": 416,
+                                    "delayEnd": 120,
+                                    "delayDuration_02": 232,
+                                    "delayEnd_02": 64
+                                },
+                                {
+                                    "componentId": "c1_r3",
+                                    "type": "loadInOut_02",
+                                    "delayStart": 32,
+                                    "delayDuration": 320,
+                                    "delayEnd": 248,
+                                    "delayDuration_02": 152,
+                                    "delayEnd_02": 112
+                                },
+                                {
+                                    "componentId": "c1_r4",
+                                    "type": "loadInOut_02",
+                                    "delayStart": 64,
+                                    "delayDuration": 224,
+                                    "delayEnd": 312,
+                                    "delayDuration_02": 72,
+                                    "delayEnd_02": 160
+                                },
+                                {
+                                    "componentId": "c1_r5",
+                                    "type": "loadInOut_01",
+                                    "delayStart": 96,
+                                    "delayDuration": 128,
+                                    "delayEnd": 672
+                                },
+                                {
+                                    "componentId": "c1_r6",
+                                    "type": "loadInOut_01",
+                                    "delayStart": 128,
+                                    "delayDuration": 32,
+                                    "delayEnd": 736
+                                },
+                                {
+                                    "componentId": "c2_r3",
+                                    "type": "loadInOut_01",
+                                    "delayStart": 192,
+                                    "delayDuration": 640,
+                                    "delayEnd": 64
+                                },
+                                {
+                                    "componentId": "c2_r4",
+                                    "type": "loadInOut_01",
+                                    "delayStart": 288,
+                                    "delayDuration": 384,
+                                    "delayEnd": 224
+                                },
+                                {
+                                    "componentId": "c2_r5",
+                                    "type": "loadInOut_01",
+                                    "delayStart": 416,
+                                    "delayDuration": 96,
+                                    "delayEnd": 384
+                                },
+                                {
+                                    "componentId": "c3_r3",
+                                    "type": "loadInOut_02",
+                                    "delayStart": 96,
+                                    "delayDuration": 480,
+                                    "delayEnd": 64,
+                                    "delayDuration_02": 192,
+                                    "delayEnd_02": 0
+                                },
+                                {
+                                    "componentId": "c3_r4",
+                                    "type": "loadInOut_02",
+                                    "delayStart": 160,
+                                    "delayDuration": 320,
+                                    "delayEnd": 192,
+                                    "delayDuration_02": 128,
+                                    "delayEnd_02": 32
+                                },
+                                {
+                                    "componentId": "c3_r5",
+                                    "type": "loadInOut_02",
+                                    "delayStart": 224,
+                                    "delayDuration": 192,
+                                    "delayEnd": 288,
+                                    "delayDuration_02": 32,
+                                    "delayEnd_02": 96
+                                },
+                                {
+                                    "componentId": "c3_r6",
+                                    "type": "loadInOut_01",
+                                    "delayStart": 288,
+                                    "delayDuration": 64,
+                                    "delayEnd": 544
+                                }
+                            ]
+                        },
+                        {
+                            "type": "equalizerBar1Loop"
+                        }
+                    ]
+                }
+            ]
+        },
+        "loadInOut_01": {
+            "parameters": [
+                "delayStart",
+                "delayDuration",
+                "delayEnd",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "Sequential",
+                    "commands": [
+                        {
+                            "type": "Idle",
+                            "delay": "${delayStart}"
+                        },
+                        {
+                            "type": "loadIn",
+                            "componentId": "${componentId}"
+                        },
+                        {
+                            "type": "Idle",
+                            "delay": "${delayDuration}"
+                        },
+                        {
+                            "type": "loadOut",
+                            "componentId": "${componentId}"
+                        },
+                        {
+                            "type": "Idle",
+                            "delay": "${delayEnd}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "loadInOut_02": {
+            "parameters": [
+                "delayStart",
+                "delayDuration",
+                "delayEnd",
+                "delayDuration_02",
+                "delayEnd_02",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "Sequential",
+                    "commands": [
+                        {
+                            "type": "Idle",
+                            "delay": "${delayStart}"
+                        },
+                        {
+                            "type": "loadIn",
+                            "componentId": "${componentId}"
+                        },
+                        {
+                            "type": "Idle",
+                            "delay": "${delayDuration}"
+                        },
+                        {
+                            "type": "loadOut",
+                            "componentId": "${componentId}"
+                        },
+                        {
+                            "type": "Idle",
+                            "delay": "${delayEnd}"
+                        },
+                        {
+                            "type": "loadIn",
+                            "componentId": "${componentId}"
+                        },
+                        {
+                            "type": "Idle",
+                            "delay": "${delayDuration_02}"
+                        },
+                        {
+                            "type": "loadOut",
+                            "componentId": "${componentId}"
+                        },
+                        {
+                            "type": "Idle",
+                            "delay": "${delayEnd_02}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "loadIn": {
+            "parameters": [
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "easing": "linear",
+                    "duration": 32,
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        "loadOut": {
+            "parameters": [
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "easing": "linear",
+                    "duration": 32,
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "layouts": {
+        "equalizerBar1": {
+            "parameters": [
+                "id",
+                "equalizerSize"
+            ],
+            "items": [
+                {
+                    "type": "VectorGraphic",
+                    "source": "equalizerBar1",
+                    "id": "${id}",
+                    "scale": "best-fit",
+                    "align": "center",
+                    "width": "${equalizerSize / 4}",
+                    "height": "${equalizerSize / 12}"
+                }
+            ]
+        },
+        "equalizerBar1s": {
+            "parameters": [
+                "equalizerSize"
+            ],
+            "items": [
+                {
+                    "type": "Container",
+                    "direction": "row",
+                    "items": [
+                        {
+                            "type": "Container",
+                            "id": "column_01",
+                            "direction": "column",
+                            "paddingRight": "${equalizerSize / 48}",
+                            "paddingLeft": "${equalizerSize / 48}",
+                            "onMount": {
+                                "type": "equalizerBar1Loop"
+                            },
+                            "items": [
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c1_r6",
+                                    "equalizerSize": "${equalizerSize}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c1_r5",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c1_r4",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c1_r3",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c1_r2",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c1_r1",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Container",
+                            "id": "column_02",
+                            "direction": "column",
+                            "paddingRight": "${equalizerSize / 48}",
+                            "paddingLeft": "${equalizerSize / 48}",
+                            "onMount": {
+                                "type": "equalizerBar1Loop"
+                            },
+                            "items": [
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c2_r6",
+                                    "opacity": 0,
+                                    "equalizerSize": "${equalizerSize}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c2_r5",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c2_r4",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c2_r3",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c2_r2",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c2_r1",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Container",
+                            "id": "column_03",
+                            "direction": "column",
+                            "paddingRight": "${equalizerSize / 48}",
+                            "paddingLeft": "${equalizerSize / 48}",
+                            "onMount": {
+                                "type": "equalizerBar1Loop"
+                            },
+                            "items": [
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c3_r6",
+                                    "equalizerSize": "${equalizerSize}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c3_r5",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c3_r4",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c3_r3",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c3_r2",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                },
+                                {
+                                    "type": "equalizerBar1",
+                                    "id": "c3_r1",
+                                    "equalizerSize": "${equalizerSize}",
+                                    "spacing": "${equalizerSize / 24}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "mainTemplate": {
+        "item": {
+            "type": "Container",
+            "width": "100%",
+            "height": "100%",
+            "justifyContent": "center",
+            "items": [
+                {
+                    "type": "Container",
+                    "width": "100%",
+                    "height": "100%",
+                    "paddingTop": "100dp",
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                    "items": [
+                        {
+                            "when": "${environment.aplVersion == '1.2'}",
+                            "type": "equalizerBar1s",
+                            "equalizerSize": 96,
+                            "paddingLeft": "${equalizerSize / 16}",
+                            "paddingRight": "${equalizerSize / 16}",
+                            "paddingTop": "${equalizerSize / 8}",
+                            "paddingBottom": "${equalizerSize / 6}"
+                        },
+                        {
+                            "when": "${environment.aplVersion == '1.3'}",
+                            "type": "VectorGraphic",
+                            "source": "equalizerBar2",
+                            "width": "50%",
+                            "height": "50%",
+                            "scale": "best-fit",
+                            "align": "center",
+                            "ColorOn": "limegreen",
+                            "ColorOff": "#333",
+                            "Tick": "${Math.floor(utcTime / 34)}"
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "width": "100%",
+                    "top": "${@viewportProfile == @hubRoundSmall ? '100dp' : '50dp'}",
+                    "alignItems": "center",
+                    "position": "absolute",
+                    "items": [
+                        {
+                            "type": "Text",
+                            "style": "textStyleCaption",
+                            "text": "${environment.aplVersion == '1.3' ? 'AVG only, time-driven' : 'AVG with AnimateItem command'}"
+                        },
+                        {
+                            "type": "Text",
+                            "style": "textStyleCaption",
+                            "text": "works with APL ${environment.aplVersion} and higher"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "aplDocData": {
+        "type": "object",
+        "properties": {
+            "description": "Use this datasource to render Launch Template in APL Authoring Tool",
+            "headerTitle": "Welcome to Responsive APL examples",
+            "hintText": "how to make create Alexa Headline?",
+            "items": [
+                {
+                    "text": "Alexa Headline",
+                    "id": "AlexaHeadline",
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/headline.png"
+                },
+                {
+                    "text": "Alexa Text List",
+                    "id": "AlexaTextList",
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/textList.png"
+                },
+                {
+                    "text": "Alexa Background",
+                    "id": "AlexaBackground",
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/background.png"
+                },
+                {
+                    "text": "Alexa Button",
+                    "id": "AlexaButton",
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/button.png"
+                },
+                {
+                    "text": "Alexa Header",
+                    "id": "AlexaHeader",
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/header.png"
+                },
+                {
+                    "text": "Alexa Footer",
+                    "id": "AlexaFooter",
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/footer.png"
+                },
+                {
+                    "text": "AlexaImage",
+                    "id": "AlexaImage",
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/image.png"
+                }
+            ]
+        },
+        "transformers": [
+            {
+                "inputPath": "hintText",
+                "transformer": "textToHint"
+            }
+        ]
+        
+    }
+}

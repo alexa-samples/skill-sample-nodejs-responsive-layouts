@@ -1,0 +1,14 @@
+{
+    "videoResponseData": {
+        "type": "object",
+        "properties": {
+            "title": "SpeakItem Command",
+            "description": "<speak>This example demonstrates the SpeakItem command. It reads the contents of a single item on the screen. The item will scroll into view if it is not currently visible. The item should have a speech property, but it is not required. Any type of component may be the recipient of SpeakItem.</speak>"
+        },
+        "transformers": [{
+            "transformer": "ssmlToSpeech",
+            "inputPath": "description",
+            "outputName": "descriptionSpeech"
+        }]
+    }
+}

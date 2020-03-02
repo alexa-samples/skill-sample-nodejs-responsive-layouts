@@ -1,0 +1,32 @@
+{
+    "listTemplateData": {
+        "type": "object",
+        "objectId": "paginatedListSample1",
+        "listItems": [
+            {
+                "primaryText": "Croissant candy canes soufflé dragée brownie apple pie. Dessert cotton candy jelly-o powder jelly beans."
+            },
+            {
+                "primaryText": "Candy canes sweet roll ice cream cookie jelly cotton candy. Toffee chocolate bar dragée. Jujubes carrot cake gummi bears icing. Candy liquorice toffee sweet roll dragée oat cake jelly bear claw pie."
+            },
+            {
+                "primaryText": "Sweet roll halvah sesame snaps wafer. Powder cheesecake tootsie roll cheesecake powder donut. Biscuit sweet tiramisu donut marzipan ice cream cookie. Dragée marzipan topping wafer cake."
+            },
+            {
+                "primaryText": "Dessert liquorice donut ice cream apple pie wafer croissant jelly-o. Toffee candy icing fruitcake muffin cake. Lemon drops sweet jelly tart tart chocolate cake cheesecake cotton candy."
+            },
+            {
+                "primaryText": "Croissant candy canes soufflé dragée brownie apple pie. Dessert cotton candy jelly-o powder jelly beans."
+            },
+            {
+                "primaryText": "Candy canes sweet roll ice cream cookie jelly cotton candy. Toffee chocolate bar dragée. Jujubes carrot cake gummi bears icing. Candy liquorice toffee sweet roll dragée oat cake jelly bear claw pie."
+            },
+            {
+                "primaryText": "Sweet roll halvah sesame snaps wafer. Powder cheesecake tootsie roll cheesecake powder donut. Biscuit sweet tiramisu donut marzipan ice cream cookie. Dragée marzipan topping wafer cake."
+            },
+            {
+                "primaryText": "Dessert liquorice donut ice cream apple pie wafer croissant jelly-o. Toffee candy icing fruitcake muffin cake. Lemon drops sweet jelly tart tart chocolate cake cheesecake cotton candy."
+            }
+        ]
+    }
+}

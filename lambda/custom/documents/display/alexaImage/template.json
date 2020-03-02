@@ -1,0 +1,101 @@
+{
+    "type": "APL",
+    "version": "1.2",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.1.0"
+        }
+    ],
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "ScrollView",
+                "height": "100%",
+                "item": {
+                    "type": "Container",
+                    "paddingLeft": "100",
+                    "paddingTop": "20",
+                    "paddingBottom": "100",
+                    "items" : [
+                        {
+                            "type": "Text",
+                            "style": "textStyleBody",
+                            "text": "Landscape image - fit from center with a background blur",
+                            "paddingBottom": "10"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "imageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/MollyforBT7.png",
+                            "imageScale": "best-fit",
+                            "imageWidth": "250",
+                            "imageAspectRatio": "standard_landscape",
+                            "imageBlurredBackground": true
+                        },
+                        {
+                            "type": "Text",
+                            "style": "textStyleBody",
+                            "text": "Landscape image - fill from center",
+                            "paddingBottom": "10",
+                            "paddingTop": "40"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "imageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/MollyforBT7.png",
+                            "imageScale": "best-fill",
+                            "imageWidth": "250",
+                            "imageAspectRatio": "standard_landscape"
+                        },
+                        {
+                            "type": "Text",
+                            "style": "textStyleBody",
+                            "text": "Square image - fill from center",
+                            "paddingBottom": "10",
+                            "paddingTop": "40"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "imageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/MollyforBT7.png",
+                            "imageScale": "best-fill",
+                            "imageWidth": "250",
+                            "imageAspectRatio": "square"
+                        },
+                        {
+                            "type": "Text",
+                            "style": "textStyleBody",
+                            "text": "Portrait image - fill from center",
+                            "paddingBottom": "10",
+                            "paddingTop": "40"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "imageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/details_01.png",
+                            "imageScale": "best-fill",
+                            "imageWidth": "250",
+                            "imageAspectRatio": "standard_portrait",
+                            "imageBlurredBackground": true
+                        },
+                        {
+                            "type": "Text",
+                            "style": "textStyleBody",
+                            "text": "Portrait image - fit from center",
+                            "paddingBottom": "10",
+                            "paddingTop": "40"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "imageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/details_01.png",
+                            "imageScale": "best-fit",
+                            "imageWidth": "200",
+                            "imageAspectRatio": "poster_portrait",
+                            "imageBlurredBackground": true
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "type": "APL",
+    "version": "1.2",
+    "import": [
+      { "name": "alexa-layouts", 
+        "version": "1.1.0"
+      }
+    ],
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "width": "100%",
+                "height": "100%",
+                "items": [
+                    {
+                        "type": "Container",
+                        "width": "100%",
+                        "height": "100%",
+                        "items": [
+                            {
+                                "type": "AlexaBackground",
+                                "backgroundImageSource": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/background-main.jpg",
+                                "backgroundBlur": true
+                            },
+                            {
+                                "type": "Container",
+                                "position": "relative",
+                                "justifyContent": "center",
+                                "alignItems": "center",
+                                "width": "100vw",
+                                "height": "100vh",
+                                "items": [
+                                  {
+                                    "type": "Text",
+                                    "width": "70vw",
+                                    "textAlign": "center",
+                                    "style": "textStyleBody",
+                                    "text": "Alexa background displays a video, image, or color behind your content. If you don't provide a value for any of these, a default background is used."
+                                  }
+                                ]
+                            }    
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

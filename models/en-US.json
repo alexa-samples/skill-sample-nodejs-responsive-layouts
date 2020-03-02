@@ -1,0 +1,538 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "apl tutorial",
+            "intents": [
+                {
+                    "name": "TutorialTypeIntent",
+                    "slots": [
+                      {
+                          "name": "TutorialType",
+                          "type": "LIST_OF_TYPES",
+                          "samples": [
+                              "I want {TutorialType}",
+                              "{TutorialType} sounds good",
+                              "how about {TutorialType}",
+                              "I'd like to see {TutorialType}",
+                              "{TutorialType}"
+                          ]
+                      }
+                  ],
+                    "samples": [
+                        "how can I create a {TutorialType}",
+                        "how can I create an {TutorialType}",
+                        "how can I create {TutorialType}",
+                        "how can I get a {TutorialType}",
+                        "how can I get an {TutorialType}",
+                        "how can I get {TutorialType}",
+                        "how can I make a {TutorialType}",
+                        "how can I make an {TutorialType}",
+                        "how can I make {TutorialType}",
+                        "how can you create a {TutorialType}",
+                        "how can you create an {TutorialType}",
+                        "how can you create {TutorialType}",
+                        "how can you get a {TutorialType}",
+                        "how can you get an {TutorialType}",
+                        "how can you get {TutorialType}",
+                        "how can you make a {TutorialType}",
+                        "how can you make an {TutorialType}",
+                        "how can you make {TutorialType}",
+                        "how do I create a {TutorialType}",
+                        "how do I create an {TutorialType}",
+                        "how do I create {TutorialType}",
+                        "how do I get a {TutorialType}",
+                        "how do I get an {TutorialType}",
+                        "how do I get {TutorialType}",
+                        "how do I make a {TutorialType}",
+                        "how do I make an {TutorialType}",
+                        "how do I make {TutorialType}",
+                        "how do I make {TutorialType}",
+                        "how do you build a {TutorialType}",
+                        "how do you build an {TutorialType}",
+                        "how do you build {TutorialType}",
+                        "how do you create a {TutorialType}",
+                        "how do you create an {TutorialType}",
+                        "how do you create {TutorialType}",
+                        "how do you make a {TutorialType}",
+                        "how do you make an {TutorialType}",
+                        "how do you make {TutorialType}",
+                        "how is a {TutorialType} createed",
+                        "how is a {TutorialType} made",
+                        "how is an {TutorialType} createed",
+                        "how is an {TutorialType} made",
+                        "how is {TutorialType} createed",
+                        "how is {TutorialType} made",
+                        "how {TutorialType} is made",
+                        "APL layout for a {TutorialType}",
+                        "APL layout for an {TutorialType}",
+                        "APL layout for {TutorialType}",
+                        "APL layouts for a {TutorialType}",
+                        "APL layouts for an {TutorialType}",
+                        "APL layouts for {TutorialType}",
+                        "what do I need for a {TutorialType}",
+                        "what do I need for an {TutorialType}",
+                        "what do I need for {TutorialType}",
+                        "what do I need to build {TutorialType}",
+                        "what do I need to create a {TutorialType}",
+                        "what do I need to create an {TutorialType}",
+                        "what do I need to create {TutorialType}",
+                        "what do I need to get for a {TutorialType}",
+                        "what do I need to get for an {TutorialType}",
+                        "what do I need to get for {TutorialType}",
+                        "what do I need to get to create a {TutorialType}",
+                        "what do I need to get to create an {TutorialType}",
+                        "what do I need to get to create {TutorialType}",
+                        "what do I need to get to make a {TutorialType}",
+                        "what do I need to get to make an {TutorialType}",
+                        "what do I need to get to make {TutorialType}",
+                        "what do I need to have to build a {TutorialType}",
+                        "what do I need to have to build an {TutorialType}",
+                        "what do I need to have to build {TutorialType}",
+                        "what do I need to have to create a {TutorialType}",
+                        "what do I need to have to create an {TutorialType}",
+                        "what do I need to have to create {TutorialType}",
+                        "what do I need to have to make a {TutorialType}",
+                        "what do I need to have to make an {TutorialType}",
+                        "what do I need to have to make {TutorialType}",
+                        "what do I need to make a {TutorialType}",
+                        "what do I need to make an {TutorialType}",
+                        "what do I need to make {TutorialType}",
+                        "what do you need for a {TutorialType}",
+                        "what do you need for an {TutorialType}",
+                        "what do you need for {TutorialType}",
+                        "what ingredients do I need to create a {TutorialType}",
+                        "what ingredients do I need to create an {TutorialType}",
+                        "what ingredients do I need to create {TutorialType}",
+                        "what ingredients do I need to make a {TutorialType}",
+                        "what ingredients do I need to make an {TutorialType}",
+                        "what ingredients do I need to make {TutorialType}",
+                        "what is in a {TutorialType}",
+                        "what is in an {TutorialType}",
+                        "what is in {TutorialType}",
+                        "what's in a {TutorialType}",
+                        "what's in an {TutorialType}",
+                        "what's in {TutorialType}",
+                        "how to create {TutorialType}",
+                        "how to create a {TutorialType}",
+                        "how to create an {TutorialType}",
+                        "how to make a {TutorialType}",
+                        "how to make an {TutorialType}",
+                        "how to make {TutorialType}",
+                        "{TutorialType}"
+                    ]
+                },
+                {
+                    "name": "AplLayoutIntent",
+                    "slots": [
+                      {
+                          "name": "Item",
+                          "type": "LIST_OF_ITEMS",
+                          "samples": [
+                              "I want {Item}",
+                              "{Item} sounds good",
+                              "how about {Item}",
+                              "I'd like the APL layout for {Item}",
+                              "{Item}"
+                          ]
+                      }
+                  ],
+                    "samples": [
+                        "how can I create a {Item}",
+                        "how can I create an {Item}",
+                        "how can I create {Item}",
+                        "how can I get a {Item}",
+                        "how can I get an {Item}",
+                        "how can I get {Item}",
+                        "how can I make a {Item}",
+                        "how can I make an {Item}",
+                        "how can I make {Item}",
+                        "how can you create a {Item}",
+                        "how can you create an {Item}",
+                        "how can you create {Item}",
+                        "how can you get a {Item}",
+                        "how can you get an {Item}",
+                        "how can you get {Item}",
+                        "how can you make a {Item}",
+                        "how can you make an {Item}",
+                        "how can you make {Item}",
+                        "how do I create a {Item}",
+                        "how do I create an {Item}",
+                        "how do I create {Item}",
+                        "how do I get a {Item}",
+                        "how do I get an {Item}",
+                        "how do I get {Item}",
+                        "how do I make a {Item}",
+                        "how do I make an {Item}",
+                        "how do I make {Item}",
+                        "how do I make {Item}",
+                        "how do you build a {Item}",
+                        "how do you build an {Item}",
+                        "how do you build {Item}",
+                        "how do you create a {Item}",
+                        "how do you create an {Item}",
+                        "how do you create {Item}",
+                        "how do you make a {Item}",
+                        "how do you make an {Item}",
+                        "how do you make {Item}",
+                        "how is a {Item} createed",
+                        "how is a {Item} made",
+                        "how is an {Item} createed",
+                        "how is an {Item} made",
+                        "how is {Item} createed",
+                        "how is {Item} made",
+                        "how {Item} is made",
+                        "APL layout for a {Item}",
+                        "APL layout for an {Item}",
+                        "APL layout for {Item}",
+                        "APL layouts for a {Item}",
+                        "APL layouts for an {Item}",
+                        "APL layouts for {Item}",
+                        "what are the ingredients for a {Item}",
+                        "what are the ingredients for an {Item}",
+                        "what are the ingredients for {Item}",
+                        "what do I need for a {Item}",
+                        "what do I need for an {Item}",
+                        "what do I need for {Item}",
+                        "what do I need to build {Item}",
+                        "what do I need to create a {Item}",
+                        "what do I need to create an {Item}",
+                        "what do I need to create {Item}",
+                        "what do I need to get for a {Item}",
+                        "what do I need to get for an {Item}",
+                        "what do I need to get for {Item}",
+                        "what do I need to get to create a {Item}",
+                        "what do I need to get to create an {Item}",
+                        "what do I need to get to create {Item}",
+                        "what do I need to get to make a {Item}",
+                        "what do I need to get to make an {Item}",
+                        "what do I need to get to make {Item}",
+                        "what do I need to have to build a {Item}",
+                        "what do I need to have to build an {Item}",
+                        "what do I need to have to build {Item}",
+                        "what do I need to have to create a {Item}",
+                        "what do I need to have to create an {Item}",
+                        "what do I need to have to create {Item}",
+                        "what do I need to have to make a {Item}",
+                        "what do I need to have to make an {Item}",
+                        "what do I need to have to make {Item}",
+                        "what do I need to make a {Item}",
+                        "what do I need to make an {Item}",
+                        "what do I need to make {Item}",
+                        "what do you need for a {Item}",
+                        "what do you need for an {Item}",
+                        "what do you need for {Item}",
+                        "what ingredients do I need to create a {Item}",
+                        "what ingredients do I need to create an {Item}",
+                        "what ingredients do I need to create {Item}",
+                        "what ingredients do I need to make a {Item}",
+                        "what ingredients do I need to make an {Item}",
+                        "what ingredients do I need to make {Item}",
+                        "what is in a {Item}",
+                        "what is in an {Item}",
+                        "what is in {Item}",
+                        "what is the APL layout for a {Item}",
+                        "what is the APL layout for an {Item}",
+                        "what is the APL layout for {Item}",
+                        "what's in a {Item}",
+                        "what's in an {Item}",
+                        "what's in {Item}",
+                        "what's the APL layout for a {Item}",
+                        "what's the APL layout for an {Item}",
+                        "what's the APL layout for {Item}",
+                        "how to create {Item}",
+                        "how to create a {Item}",
+                        "how to create an {Item}",
+                        "how to make a {Item}",
+                        "how to make an {Item}",
+                        "how to make {Item}",
+                        "{Item}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_ITEMS",
+                    "values": [
+                        {
+                            "id": "AlexaHeadline",
+                            "name": {
+                                "value": "alexa headline",
+                                "synonyms": [
+                                    "headline"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "AlexaTextList",
+                            "name": {
+                                "value": "alexa text list",
+                                "synonyms": [
+                                    "text list"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "AlexaBackground",
+                            "name": {
+                                "value": "alexa background",
+                                "synonyms": [
+                                    "background"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "AlexaButton",
+                            "name": {
+                                "value": "alexa button",
+                                "synonyms": [
+                                    "button"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "AlexaHeader",
+                            "name": {
+                                "value": "alexa header",
+                                "synonyms": [
+                                    "header"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "AlexaFooter",
+                            "name": {
+                                "value": "alexa footer",
+                                "synonyms": [
+                                    "footer"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "AlexaImage",
+                            "name": {
+                                "value": "alexa image",
+                                "synonyms": [
+                                    "image"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "AlexaPageCounter",
+                            "name": {
+                                "value": "alexa page counter",
+                                "synonyms": [
+                                    "page counter",
+                                    "counter"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "DancingEqualizerBars",
+                            "name": {
+                                "value": "dancing equalizer bars",
+                                "synonyms": [
+                                    "dancing equalizer",
+                                    "equalizer bars",
+                                    "equalizer bar",
+                                    "dancing equalizer bar",
+                                    "dancing bars",
+                                    "dancing bar"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "Parallax",
+                            "name": {
+                                "value": "parallax"
+                            }
+                        },
+                        {
+                            "id": "AvgAnimation",
+                            "name": {
+                                "value": "avg animation",
+                                "synonyms": [
+                                    "animatiion",
+                                    "a.v.g animation"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "SpeakList",
+                            "name": {
+                                "value": "vertical speak list",
+                                "synonyms": [
+                                    "speak list",
+                                    "vertical"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "SpeakListHorizontal",
+                            "name": {
+                                "value": "horizontal speak list",
+                                "synonyms": [
+                                    "horizontal"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "SpeakItem",
+                            "name": {
+                                "value": "speak item"
+                            }
+                        },
+                        {
+                            "id": "Video",
+                            "name": {
+                                "value": "video",
+                                "synonyms": [
+                                    "v.d.o."
+                                ]
+                            }
+                        },
+                        {
+                            "id": "TvFocusedState",
+                            "name": {
+                                "value": "tv focused state",
+                                "synonyms": [
+                                    "t.v. focused state",
+                                    "focused state",
+                                    "focused state on tv"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_OF_TYPES",
+                    "values": [
+                        {
+                            "id": "AplResponsiveLayouts",
+                            "name": {
+                                "value": "apl responsive layouts",
+                                "synonyms": [
+                                    "responsive layouts",
+                                    "layouts",
+                                    "layout",
+                                    "responsive",
+                                    "first"
+                                ]
+                            }
+                        },
+                        {
+                          "id": "AplRecipes",
+                          "name": {
+                              "value": "apl recipes",
+                              "synonyms": [
+                                "apl recipe",
+                                "recipes",
+                                "recipe",
+                                "second"
+                              ]
+                          }
+                      }
+                    ]
+                }
+            ]
+      },
+      "dialog": {
+          "intents": [
+            {
+                "name": "TutorialTypeIntent",
+                "delegationStrategy": "ALWAYS",
+                "confirmationRequired": false,
+                "prompts": {},
+                "slots": [
+                    {
+                        "name": "TutorialType",
+                        "type": "LIST_OF_TYPES",
+                        "confirmationRequired": false,
+                        "elicitationRequired": true,
+                        "prompts": {
+                            "elicitation": "ElicitItemPrompt"
+                        },
+                        "validations": [
+                            {
+                                "type": "hasEntityResolutionMatch",
+                                "prompt": "ItemValidationPrompt"
+                            }
+                        ]
+                    }
+                ]
+            },
+              {
+                  "name": "AplLayoutIntent",
+                  "delegationStrategy": "ALWAYS",
+                  "confirmationRequired": false,
+                  "prompts": {},
+                  "slots": [
+                      {
+                          "name": "Item",
+                          "type": "LIST_OF_ITEMS",
+                          "confirmationRequired": false,
+                          "elicitationRequired": true,
+                          "prompts": {
+                              "elicitation": "ElicitItemPrompt"
+                          },
+                          "validations": [
+                              {
+                                  "type": "hasEntityResolutionMatch",
+                                  "prompt": "ItemValidationPrompt"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "delegationStrategy": "ALWAYS"
+      },
+      "prompts": [
+          {
+              "id": "ElicitItemPrompt",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "Which APL layout did you want?"
+                  }
+              ]
+          },
+          {
+              "id": "ItemValidationPrompt",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "I didn't catch that.  Which APL layout did you want?"
+                  },
+                  {
+                      "type": "PlainText",
+                      "value": "I don't know the APL layout for that.  Which APL layout did you want?"
+                  }
+              ]
+          }
+      ]
+  }
+  }

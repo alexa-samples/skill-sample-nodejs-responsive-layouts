@@ -1,0 +1,11 @@
+{
+  "aplDocData": {
+    "description": "Use this datasource to render Help Template in APL Authoring Tool",
+    "headerTitle": "HELP",
+    "headerBackButton": "true",
+    "headerSubtitle": "Select the aplDoc you want to prepare",
+    "items": [
+        { "primaryText": "How do I create Alexa Headline?", "id": "AlexaHeadline" }
+    ]
+  }
+}

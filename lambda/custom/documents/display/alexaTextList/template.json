@@ -1,0 +1,56 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.1.0"
+        }
+    ],
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "AlexaTextList",
+                "theme": "dark",
+                "headerTitle": "Header Title",
+                "headerSubtitle": "Header Subtitle",
+                "headerAttributionText": "Attribution",
+                "headerAttributionImage": "https://s3.amazonaws.com/ask-skills-assets/apl-layout-assets/attribution_dark_hub_prime.png",
+                "headerAttributionPrimacy": true,
+                "headerDivider": false,
+                "headerBackButton": true,
+                "headerBackButtonAccessibilityLabel": "back",
+                "headerBackgroundColor": "transparent",
+                "headerBackButtonCommand": {
+                    "type": "SendEvent",
+                    "arguments": [
+                        "goBack"
+                    ]
+                },
+                "backgroundColor": "transparent",
+                "backgroundImageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/BT6_Background.png",
+                "backgroundVideoSource": "",
+                "backgroundScale": "best-fill",
+                "backgroundAlign": "center",
+                "backgroundBlur": false,
+                "backgroundColorOverlay": false,
+                "backgroundOverlayGradient": false,
+                "backgroundVideoAutoPlay": false,
+                "backgroundVideoAudioTrack": "foreground",
+                "hideDivider": false,
+                "hideOrdinal": false,
+                "primaryAction": {
+                    "type": "SendEvent",
+                    "arguments": [
+                        "ListItemSelected",
+                        "${ordinal}"
+                    ]
+                },
+                "listItems": "${payload.listTemplateData.listItems}"
+            }
+        ]
+    }
+}

@@ -1,0 +1,256 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.1.0"
+        }
+    ],
+    "resources": [
+        {
+            "description": "Define dimensions for HorizontalListItem layout",
+            "dimensions": {
+                "touchWrapperWidth": "auto",
+                "touchWrapperHeight": "80vh",
+                "containerWidth": "50vw",
+                "imageWidth": "50vh",
+                "imageHeight": "50vh",
+                "imageBorderRadius": "999vh",
+                "itemBorderWidth": "5dp",
+                "textWidth": "40vw",
+                "textHeight": "8vh",
+                "textPaddingTop": "2vh"
+            }
+        },
+        {
+            "description": "Override dimensions for HorizontalListItem layout on Small Round Hubs",
+            "when": "${@viewportProfile == @hubRoundSmall}",
+            "dimensions": {
+                "touchWrapperWidth": "60vw",
+                "touchWrapperHeight": "70vh",
+                "containerWidth": "50vw",
+                "imageWidth": "50vw",
+                "imageHeight": "50vh",
+                "textWidth": "50vw",
+                "textHeight": "20vh",
+                "textPaddingTop": "3vh"
+            }
+        }
+    ],
+    "styles": {
+        "horizontalItemFrame": {
+            "values": [
+                {
+                    "backgroundColor": "transparent",
+                    "borderColor": "transparent",
+                    "borderWidth": "@itemBorderWidth"
+                },
+                {
+                    "when": "${state.focused}",
+                    "backgroundColor": "@colorWhite",
+                    "borderColor": "@colorComponent"
+                }
+            ]
+        }
+    },
+    "layouts": {
+        "HorizontalListItem": {
+            "description": "a touchable container with an image and a text - dimensions are adapted depending on Hub type",
+            "item": {
+                "type": "TouchWrapper",
+                "id": "touch-${data.id}",
+                "width": "@touchWrapperWidth",
+                "height": "@touchWrapperHeight",
+                "item": {
+                    "type": "Container",
+                    "width": "@containerWidth",
+                    "height": "80vh",
+                    "alignItems": "center",
+                    "direction": "column",
+                    "inheritParentState": true,
+                    "items": [
+                        {
+                            "type": "Frame",
+                            "width": "@imageWidth",
+                            "height": "@imageHeight",
+                            "borderRadius": "@imageBorderRadius",
+                            "style": "horizontalItemFrame",
+                            "inheritParentState": true,
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "source": "${data.image}",
+                                    "width": "${@imageWidth - (@itemBorderWidth * 2)}",
+                                    "height": "${@imageHeight - (@itemBorderWidth * 2)}",
+                                    "borderRadius": "@imageBorderRadius",
+                                    "scale": "best-fill",
+                                    "align": "center"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Text",
+                            "text": "${data.name}",
+                            "width": "@textWidth",
+                            "height": "@textHeight",
+                            "paddingTop": "@textPaddingTop",
+                            "textAlign": "center",
+                            "style": "textStyleDisplay6",
+                            "fontSize": "6vh",
+                            "opacity": "${environment.aplVersion == '1.1' ? 0 : 1}",
+                            "onMount": [
+                                {
+                                    "when": "${environment.aplVersion == '1.1'}",
+                                    "type": "AnimateItem",
+                                    "duration": 2000,
+                                    "value": {
+                                        "property": "opacity",
+                                        "to": 1
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "onPress": [
+                    {
+                        "when": "${environment.aplVersion == '1.1'}",
+                        "type": "AnimateItem",
+                        "easing": "ease-in-out",
+                        "duration": 1000,
+                        "value": [
+                            {
+                                "property": "transform",
+                                "from": [
+                                    {
+                                        "translateX": 0
+                                    },
+                                    {
+                                        "scale": 1
+                                    }
+                                ],
+                                "to": [
+                                    {
+                                        "translateX": 0
+                                    },
+                                    {
+                                        "scale": 1.1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "SendEvent",
+                        "arguments": [
+                            "aplTutorialType",
+                            "${data.id}"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "items": [
+                    {
+                        "type": "AlexaBackground",
+                        "description": "Set background Image",
+                        "backgroundImageSource": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/background-main.jpg",
+                        "backgroundScale": "best-fill",
+                        "colorOverlay": true
+                    },
+                    {
+                        "description": "Use Responsive Header accross all Hubs",
+                        "type": "AlexaHeader",
+                        "headerTitle": "APL Tutorial",
+                        "headerDivider": true
+                    },
+                    {
+                        "description": "Use a sequence to display a horizontal scrolling list of aplDocs for Small Round Hubs",
+                        "when": "${@viewportProfile == @hubRoundSmall}",
+                        "type": "Container",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "items": [
+                            {
+                                "type": "Sequence",
+                                "scrollDirection": "horizontal",
+                                "data": [
+                                    {
+                                        "id": "AplResponsiveLayouts",
+                                        "name": "APL Responsive Layouts",
+                                        "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/responsive-template.png"
+                                    },
+                                    {
+                                        "id": "AplRecipes",
+                                        "name": "APL Recipes",
+                                        "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/APL-recipes.png"
+                                    }
+                                ],
+                                "width": "100vw",
+                                "height": "100vh",
+                                "firstItem": [
+                                    {
+                                        "type": "Container",
+                                        "width": "25vw"
+                                    }
+                                ],
+                                "lastItem": [
+                                    {
+                                        "type": "Container",
+                                        "width": "15vw"
+                                    }
+                                ],
+                                "item": [
+                                    {
+                                        "type": "HorizontalListItem"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "For Landscape Hubs",
+                        "when": "${@viewportProfile != @hubRoundSmall}",
+                        "type": "Container",
+                        "direction": "column",
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "items": [
+                            {
+                                "type": "Container",
+                                "paddingTop": "10vh",
+                                "direction": "row",
+                                "data": [
+                                    {
+                                        "id": "AplResponsiveLayouts",
+                                        "name": "APL Responsive Layouts",
+                                        "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/responsive-template.png"
+                                    },
+                                    {
+                                        "id": "AplRecipes",
+                                        "name": "APL Recipes",
+                                        "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/APL-recipes.png"
+                                    }
+                                ],
+                                "items": [
+                                    {
+                                        "type": "HorizontalListItem"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
