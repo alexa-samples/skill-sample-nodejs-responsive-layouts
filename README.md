@@ -31,3 +31,6 @@ APL Responsive Layouts screen
 
 APL Recipes screen
 ![Recipes screen](https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/screenshot-recipes.png)
+
+### APL documents
+All APL documents (JSON) can be found in [/lambda/custom/documents/display/](/lambda/custom/documents/display/) folder
