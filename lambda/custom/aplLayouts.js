@@ -87,6 +87,11 @@ module.exports = {
             name: `TV Focused State`,
             instructions: `This example demonstrates how to use focused states with a horizontal list on a TV device such as Fire TVs or LG TVs. Try this example on TV with your remote.`,
             image: `https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/tv-focused-state.png`
+        },
+        AnalogClock: {
+            name: `Analog Clock`,
+            instructions: `This example demonstrates how to create an Analog Clock that works with the local time.`,
+            image: `https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/analog-clock.png`
         }
     }
 };

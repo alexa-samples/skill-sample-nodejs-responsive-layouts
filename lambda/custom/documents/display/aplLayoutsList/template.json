@@ -170,6 +170,9 @@
         "items": [
             {
                 "type": "Container",
+                "height": "100%",
+                "width": "100%",
+                "direction": "column",
                 "items": [
                     {
                         "description": "Set background Image",
@@ -183,6 +186,74 @@
                         "type": "AlexaHeader",
                         "headerTitle": "${payload.aplDocData.properties.headerTitle}",
                         "headerDivider": true
+                    },
+                    {
+                        "description": "Use containers to display 4 aplDocs per row (container) in a ScrollView for Landscape Hubs",
+                        "when": "${@viewportProfile != @hubRoundSmall}",
+                        "type": "ScrollView",
+                        "height": "100%",
+                        "scrollDirection": "vertical",
+                        "items": [
+                            {
+                                "type": "Container",
+                                "direction": "column",
+                                "paddingBottom": "20vh",
+                                "items": [
+                                    {
+                                        "type": "Container",
+                                        "width": "100vw",
+                                        "paddingTop": "5vh",
+                                        "direction": "row",
+                                        "data": [
+                                            "${payload.aplDocData.properties.items[0]}",
+                                            "${payload.aplDocData.properties.items[1]}",
+                                            "${payload.aplDocData.properties.items[2]}",
+                                            "${payload.aplDocData.properties.items[3]}"
+                                        ],
+                                        "items": [
+                                            {
+                                                "type": "HorizontalListItem"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Container",
+                                        "width": "100vw",
+                                        "paddingTop": "5vh",
+                                        "direction": "row",
+                                        "data": [
+                                            "${payload.aplDocData.properties.items[4]}",
+                                            "${payload.aplDocData.properties.items[5]}",
+                                            "${payload.aplDocData.properties.items[6]}",
+                                            "${payload.aplDocData.properties.items[7]}"
+                                        ],
+                                        "items": [
+                                            {
+                                                "type": "HorizontalListItem"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "when": "${payload.aplDocData.properties.items[8]}",
+                                        "type": "Container",
+                                        "width": "100vw",
+                                        "paddingTop": "5vh",
+                                        "direction": "row",
+                                        "data": [
+                                            "${payload.aplDocData.properties.items[8]}",
+                                            "${payload.aplDocData.properties.items[9]}",
+                                            "${payload.aplDocData.properties.items[10]}",
+                                            "${payload.aplDocData.properties.items[11]}"
+                                        ],
+                                        "items": [
+                                            {
+                                                "type": "HorizontalListItem"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "description": "Use a sequence to display a horizontal scrolling list of aplDocs for Small Round Hubs",
@@ -217,55 +288,8 @@
                                 ]
                             }
                         ]
-                    },
-                    {
-                        "description": "Use containers to display 4 aplDocs per row (container) for Landscape Hubs",
-                        "when": "${@viewportProfile != @hubRoundSmall}",
-                        "type": "Container",
-                        "height": "70vh",
-                        "width": "100vw",
-                        "direction": "column",
-                        "alignItems": "center",
-                        "justifyContent": "center",
-                        "items": [
-                            {
-                                "type": "Container",
-                                "width": "100vw",
-                                "height": "35vh",
-                                "paddingTop": "5vh",
-                                "direction": "row",
-                                "data": [
-                                    "${payload.aplDocData.properties.items[0]}",
-                                    "${payload.aplDocData.properties.items[1]}",
-                                    "${payload.aplDocData.properties.items[2]}",
-                                    "${payload.aplDocData.properties.items[3]}"
-                                ],
-                                "items": [
-                                    {
-                                        "type": "HorizontalListItem"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "Container",
-                                "width": "100vw",
-                                "height": "35vh",
-                                "paddingTop": "5vh",
-                                "direction": "row",
-                                "data": [
-                                    "${payload.aplDocData.properties.items[4]}",
-                                    "${payload.aplDocData.properties.items[5]}",
-                                    "${payload.aplDocData.properties.items[6]}",
-                                    "${payload.aplDocData.properties.items[7]}"
-                                ],
-                                "items": [
-                                    {
-                                        "type": "HorizontalListItem"
-                                    }
-                                ]
-                            }
-                        ]
                     }
+                    
                 ]
             }
         ]

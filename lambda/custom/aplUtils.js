@@ -24,6 +24,7 @@ const APLDocs = {
         "AlexaFooter": require('./documents/display/alexaFooter/template.json'),
         "AlexaImage": require('./documents/display/alexaImage/template.json'),
         "AlexaPageCounter": require('./documents/display/alexaPageCounter/template.json'),
+        "AnalogClock": require('./documents/display/analogClock/template.json'),
         "DancingEqualizerBars": require('./documents/display/dancingEqualizerBars/template.json'),
         "Parallax": require('./documents/display/parallax/template.json'),
         "AvgAnimation": require('./documents/display/avgAnimation/template.json'),
@@ -177,7 +178,7 @@ function generateAplLayoutsListScreenDatasource(handlerInput, tutorialType) {
         aplDocsIdsToDisplay = ["AlexaHeadline", "AlexaTextList", "AlexaBackground", "AlexaButton", "AlexaHeader", "AlexaFooter", "AlexaImage", "AlexaPageCounter"];
         headerTitle = handlerInput.t('HEADER_TITLE_LAYOUT');
     } else {
-        aplDocsIdsToDisplay = ["DancingEqualizerBars", "Parallax", "AvgAnimation", "SpeakList", "SpeakListHorizontal", "SpeakItem", "Video", "TvFocusedState"];
+        aplDocsIdsToDisplay = ["AnalogClock", "DancingEqualizerBars", "Parallax", "AvgAnimation", "SpeakList", "SpeakListHorizontal", "SpeakItem", "Video", "TvFocusedState"];
         headerTitle = handlerInput.t('HEADER_TITLE_RECIPE');
     }
     const aplDocs = [];

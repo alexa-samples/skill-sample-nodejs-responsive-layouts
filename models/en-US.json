@@ -424,6 +424,15 @@
                                     "focused state on tv"
                                 ]
                             }
+                        },
+                        {
+                            "id": "AnalogClock",
+                            "name": {
+                                "value": "analog clock",
+                                "synonyms": [
+                                    "clock"
+                                ]
+                            }
                         }
                     ]
                 },
