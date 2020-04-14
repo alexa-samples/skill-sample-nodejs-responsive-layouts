@@ -137,6 +137,26 @@ const AplLayoutHandler = {
 };
 
 /**
+ * Handles VIDEOENDED Event (Alexa.Presentation.APL.UserEvent - aplDocInstructions) sent when Video is ended from APL layout
+ */
+const VideoEndedHandler = {
+  canHandle(handlerInput) {
+      return Alexa.getRequestType(handlerInput.requestEnvelope) === 'Alexa.Presentation.APL.UserEvent'
+      && handlerInput.requestEnvelope.request.arguments[0] === 'VIDEOENDED';
+  },
+  async handle(handlerInput) {
+      console.log(handlerInput.requestEnvelope.request.arguments[0]);
+
+      const videoEndSpeech = "This speech is triggered in the Video Ended Handler. You can say go back to go to the previous screen.";
+
+      return handlerInput.responseBuilder
+          .speak(videoEndSpeech)
+          .reprompt(videoEndSpeech)
+          .getResponse();
+  }
+};
+
+/**
  * Handles AMAZON.HelpIntent requests sent by Alexa
  */
 const HelpHandler = {
@@ -464,6 +484,7 @@ exports.handler = Alexa.SkillBuilders.custom()
     LaunchRequestHandler,
     TutorialTypeHandler,
     AplLayoutHandler,
+    VideoEndedHandler,
     HelpHandler,
     RepeatHandler,
     PreviousHandler,

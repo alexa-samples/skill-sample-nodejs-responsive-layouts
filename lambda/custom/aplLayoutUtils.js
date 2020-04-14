@@ -6,14 +6,6 @@
  * This file defines utilities to manage aplLayouts
  */
 
-// Images for known aplLayouts
-const APLLAYOUT_IMAGES = {
-    AlexaHeadline: "",
-    AlexaTextList: ""
-};
-// Image for unknown aplLayouts
-const APLLAYOUT_DEFAULT_IMAGE = "";
-
 module.exports = {
 
     /**

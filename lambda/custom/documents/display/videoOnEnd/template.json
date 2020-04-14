@@ -1,0 +1,39 @@
+{
+    "type": "APL",
+    "version": "1.3",
+    "theme": "dark",
+    
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "items": [
+                    {
+                        "type": "Video",
+                        "width": "100%",
+                        "height": "100%",
+                        "autoplay": true,
+                        "source": "https://s3.amazonaws.com/elon-video-urls/BigBuckBunny.m4v",
+                        "scale": "best-fit",
+                        "onEnd": [
+                            {
+                              "type": "SendEvent",
+                              "arguments": [
+                                "VIDEOENDED"
+                              ],
+                              "components": [
+                                "idForTheTextComponent"
+                              ]
+                            }
+                        ]
+                    }
+                ],
+                "height": "100%",
+                "width": "100%"
+            }
+        ]
+    }
+}

@@ -48,6 +48,21 @@ module.exports = {
             instructions: `The Alexa page counter responsive component displays a current page number and total number of pages. You can use this to number pages in a Pager.`,
             image: `https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/pageCounter.png`
         },
+        AnalogClock: {
+            name: `Analog Clock`,
+            instructions: `This example demonstrates how to create an Analog Clock that works with the local time.`,
+            image: `https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/analog-clock.png`
+        },
+        GridList: {
+            name: `Grid List`,
+            instructions: `This example demonstrates a workaround how to create an grid list that wraps items to next row.`,
+            image: `https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/grid-list.png`
+        },
+        VideoOnEnd: {
+            name: `Send event on Video end`,
+            instructions: ``,
+            image: `https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/video-on-end.png`
+        },
         DancingEqualizerBars: {
             name: `Dancing equalizer bars`,
             instructions: `These dancing equalizer bars using Alexa vector graphics or A V G with the new AnimateItem command in APL 1.1`,
@@ -87,11 +102,6 @@ module.exports = {
             name: `TV Focused State`,
             instructions: `This example demonstrates how to use focused states with a horizontal list on a TV device such as Fire TVs or LG TVs. Try this example on TV with your remote.`,
             image: `https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/tv-focused-state.png`
-        },
-        AnalogClock: {
-            name: `Analog Clock`,
-            instructions: `This example demonstrates how to create an Analog Clock that works with the local time.`,
-            image: `https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/analog-clock.png`
         }
     }
 };

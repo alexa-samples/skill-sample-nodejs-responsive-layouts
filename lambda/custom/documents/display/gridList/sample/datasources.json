@@ -1,0 +1,49 @@
+{
+    "aplDocData": {
+        "type": "object",
+        "properties": {
+            "lines": [
+                {},
+                {}
+            ],
+            "items": [
+                {
+                    "number": 1,
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/headline.png"
+                },
+                {
+                    "number": 2,
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/textList.png"
+                },
+                {
+                    "number": 3,
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/background.png"
+                },
+                {
+                    "number": 4,
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/button.png"
+                },
+                {
+                    "number": 5,
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/header.png"
+                },
+                {
+                    "number": 6,
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/footer.png"
+                },
+                {
+                    "number": 7,
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/image.png"
+                },
+                {
+                    "number": 8,
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/image.png"
+                },
+                {
+                    "number": 9,
+                    "image": "https://ask-skills-assets.s3.amazonaws.com/apl-layout-assets/arl-examples/image.png"
+                }
+            ]
+        }
+    }
+}

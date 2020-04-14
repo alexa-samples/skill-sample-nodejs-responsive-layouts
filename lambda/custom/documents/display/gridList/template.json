@@ -1,0 +1,76 @@
+{
+    "type": "APL",
+    "version": "1.3",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.1.0"
+        }
+    ],
+    "layouts": {
+        "HorizontalGridItem": {
+            "description": "a touchable container with an image and a text - dimensions are adapted depending on Hub type",
+            "items": [
+                {
+                    "type": "Container",
+                    "width": "25%",
+                    "height": "300dp",
+                    "direction": "column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "width": "100%",
+                            "height": "85%",
+                            "source": "${data.image}",
+                            "scale": "best-fill",
+                            "align": "center"
+                        },
+                        {
+                            "type": "Text",
+                            "style": "textStyleBody",
+                            "text": "Row: ${ordinal}, data: ${data.number}"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "height": "100%",
+                "width": "100%",
+                "item": {
+                    "type": "Container",
+                    "height": "100%",
+                    "width": "100%",
+                    "direction": "column",
+                    "numbered": true,
+                    "data": "${payload.aplDocData.properties.lines}",
+                    "items": [
+                        {
+                            "type": "Container",
+                            "direction": "row",
+                            "data": [
+                                "${payload.aplDocData.properties.items[(ordinal - 1) + (3 * (ordinal - 1))]}",
+                                "${payload.aplDocData.properties.items[ordinal + (3 * (ordinal - 1))]}",
+                                "${payload.aplDocData.properties.items[(ordinal + 1) + (3 * (ordinal - 1))]}",
+                                "${payload.aplDocData.properties.items[(ordinal + 2) + (3 * (ordinal - 1))]}"
+                            ],
+                            "items": [
+                                {
+                                    "type": "HorizontalGridItem"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

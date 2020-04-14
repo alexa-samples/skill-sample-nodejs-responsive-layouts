@@ -25,6 +25,8 @@ const APLDocs = {
         "AlexaImage": require('./documents/display/alexaImage/template.json'),
         "AlexaPageCounter": require('./documents/display/alexaPageCounter/template.json'),
         "AnalogClock": require('./documents/display/analogClock/template.json'),
+        "GridList": require('./documents/display/gridList/template.json'),
+        "VideoOnEnd": require('./documents/display/videoOnEnd/template.json'),
         "DancingEqualizerBars": require('./documents/display/dancingEqualizerBars/template.json'),
         "Parallax": require('./documents/display/parallax/template.json'),
         "AvgAnimation": require('./documents/display/avgAnimation/template.json'),
@@ -40,7 +42,8 @@ const APLDocs = {
         "SpeakListHorizontal": require('./documents/display/speakListHorizontal/sample/datasources.json'),
         "SpeakItem": require('./documents/display/speakItem/sample/datasources.json'),
         "Video": require('./documents/display/video/sample/datasources.json'),
-        "TvFocusedState": require('./documents/display/tvFocusedState/sample/datasources.json')
+        "TvFocusedState": require('./documents/display/tvFocusedState/sample/datasources.json'),
+        "GridList": require('./documents/display/gridList/sample/datasources.json')
     }
 };
 
@@ -178,7 +181,7 @@ function generateAplLayoutsListScreenDatasource(handlerInput, tutorialType) {
         aplDocsIdsToDisplay = ["AlexaHeadline", "AlexaTextList", "AlexaBackground", "AlexaButton", "AlexaHeader", "AlexaFooter", "AlexaImage", "AlexaPageCounter"];
         headerTitle = handlerInput.t('HEADER_TITLE_LAYOUT');
     } else {
-        aplDocsIdsToDisplay = ["AnalogClock", "DancingEqualizerBars", "Parallax", "AvgAnimation", "SpeakList", "SpeakListHorizontal", "SpeakItem", "Video", "TvFocusedState"];
+        aplDocsIdsToDisplay = ["AnalogClock", "GridList", "VideoOnEnd", "DancingEqualizerBars", "Parallax", "AvgAnimation", "SpeakList", "SpeakListHorizontal", "SpeakItem", "Video", "TvFocusedState"];
         headerTitle = handlerInput.t('HEADER_TITLE_RECIPE');
     }
     const aplDocs = [];

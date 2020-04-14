@@ -433,6 +433,26 @@
                                     "clock"
                                 ]
                             }
+                        },
+                        {
+                            "id": "GridList",
+                            "name": {
+                                "value": "grid list",
+                                "synonyms": [
+                                    "grid"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "VideoOnEnd",
+                            "name": {
+                                "value": "video on ended",
+                                "synonyms": [
+                                    "send event on video end",
+                                    "event on video end",
+                                    "video end"
+                                ]
+                            }
                         }
                     ]
                 },
