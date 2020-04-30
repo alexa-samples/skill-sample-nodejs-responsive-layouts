@@ -26,10 +26,6 @@
     },
     "apis": {
       "custom": {
-        "endpoint": {
-          "sourceDir": "lambda/custom",
-          "uri": "ask-custom-responsive-apl-examples-default"
-        },
         "interfaces": [
           {
             "type": "ALEXA_PRESENTATION_APL",
