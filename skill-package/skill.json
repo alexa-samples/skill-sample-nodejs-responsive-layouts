@@ -6,9 +6,7 @@
           "name": "APL Tutorial",
           "summary": "Alexa Presentation Language Tutorial",
           "description": "Alexa Presentation Language Tutorial with Responsive APL Examples",
-          "examplePhrases": [
-            "Alexa open APL Tutorial"
-          ],
+          "examplePhrases": ["Alexa open APL Tutorial"],
           "keywords": [
             "APL",
             "Alexa Presentation Language",
@@ -26,10 +24,6 @@
     },
     "apis": {
       "custom": {
-        "endpoint": {
-          "sourceDir": "lambda/custom",
-          "uri": "ask-custom-responsive-apl-examples-default"
-        },
         "interfaces": [
           {
             "type": "ALEXA_PRESENTATION_APL",
